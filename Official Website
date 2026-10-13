@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chief Emergency Care-Kenya | Emergency Care Services &amp; Training</title>
+<meta name="description" content="Chief Emergency Care-Kenya (CECK): emergency care services, event medical cover and AHA-accredited First Aid, BLS, ACLS and PALS training.">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" href="/favicon.ico">
+<style>
+:root{--red:#c8102e;--dark:#14213d;--mid:#1b2d52;--text:#2b2f36}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Segoe UI,Arial,sans-serif;color:#e6ebf5;line-height:1.6;background:var(--dark)}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:20}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:8px 20px;flex-wrap:wrap;gap:8px}
+nav ul{display:flex;gap:20px;list-style:none;font-size:.95rem;font-weight:600;flex-wrap:wrap;color:var(--dark)}
+nav ul a:hover{color:var(--red)}
+.skip-link{position:absolute;left:8px;top:8px;background:#fff;color:var(--dark);padding:.5rem .75rem;border-radius:6px;z-index:30;transform:translateY(-120%);transition:transform .18s ease}
+.skip-link:focus{transform:translateY(0)}
+.ecg{height:28px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='76' height='28' viewBox='0 0 76 28'%3E%3Cpath d='M0 20H6C8 20 9 14 13 14C17 14 18 20 21 20H29L30.5 21.5L33.5 3L36.5 25L38 20H46C49 20 50 14 55 14C60 14 61 20 64 20H76' fill='none' stroke='%23c8102e' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") repeat-x;animation:ecgMove 2.1s linear infinite;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+@keyframes ecgMove{from{background-position:0 0}to{background-position:-76px 0}}
+@media(prefers-reduced-motion:reduce){.ecg{animation:none}}
+.hero{position:relative;color:#fff;text-align:center;padding:110px 20px 90px;overflow:hidden;background:var(--dark)}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease-in-out}
+.slide.active{opacity:1}
+.hero::before{content:"";position:absolute;inset:0;background:rgba(20,33,61,.62);z-index:1}
+.hero-content{position:relative;z-index:2}
+.hero h1{font-size:2.3rem;max-width:780px;margin:auto}
+.hero p{max-width:640px;margin:16px auto 28px;opacity:.95}
+.dots{position:absolute;bottom:16px;left:0;right:0;z-index:3;display:flex;justify-content:center;gap:8px}
+.dots button{width:11px;height:11px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.5);cursor:pointer}
+.dots button.active{background:var(--red);outline:3px solid rgba(200,16,46,.12)}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:12px 28px;border-radius:6px;font-weight:600;margin:4px}
+.btn.alt{background:transparent;border:2px solid #fff}
+section{padding:64px 20px}
+.wrap{max-width:1100px;margin:auto}
+h2{color:#fff;font-size:1.8rem;text-align:center}
+h2::after{content:"";display:block;width:60px;height:4px;background:var(--red);margin:10px auto 0;border-radius:2px}
+.sub{text-align:center;color:#b8c4d9;margin:14px 0 36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:#fff;color:var(--text);border-radius:10px;padding:24px;box-shadow:0 3px 12px rgba(0,0,0,.2);border-top:4px solid var(--red)}
+.card h3{color:var(--dark);margin-bottom:8px;font-size:1.1rem}
+.alt-bg{background:var(--mid)}
+.person{text-align:center}
+.avatar{width:110px;height:110px;border-radius:50%;background:#dfe5ee;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--dark);font-weight:700;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.role{color:var(--red);font-weight:600;font-size:.9rem;margin-bottom:8px}
+.stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:30px;text-align:center}
+.stats b{display:block;font-size:1.8rem;color:#ff6b81}
+form{max-width:560px;margin:auto;display:grid;gap:12px}
+input,textarea,select{padding:12px;border:1px solid #ccd;border-radius:6px;font:inherit;width:100%;color:var(--text);background:#fff}
+button.send{background:var(--red);color:#fff;border:0;padding:13px;border-radius:6px;font-size:1rem;cursor:pointer}
+button.send:hover{background:#a50d25}
+.contact-info{text-align:center;margin-top:24px;color:#cfd6e4}
+.contact-info a{color:#ff6b81;font-weight:600}
+footer{background:#0d1730;color:#cfd6e4;text-align:center;padding:28px 20px;font-size:.9rem}
+.sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+button:focus, a:focus, input:focus, select:focus, textarea:focus{outline:3px solid rgba(255,255,255,.12);outline-offset:2px}
+@media(max-width:600px){.hero h1{font-size:1.7rem}.hero{padding:80px 16px 70px}nav{justify-content:center}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+<nav aria-label="Primary">
+  <a href="#home" aria-label="Chief Emergency Care-Kenya home">
+    <svg height="64" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chief Emergency Care-Kenya logo">
+      <path d="M200 132C150 102 104 72 118 38C132 8 184 14 200 46C216 14 268 8 282 38C296 72 250 102 200 132Z" fill="none" stroke="#c8102e" stroke-width="7" stroke-linejoin="round"/>
+      <rect x="158" y="58" width="84" height="36" rx="9" fill="#14213d"/>
+      <rect x="182" y="36" width="36" height="80" rx="9" fill="#14213d"/>
+      <path d="M166 76H189L195 64L203 90L209 72L213 76H234" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M112 126C150 152 205 150 258 116C266 112 273 121 265 128C218 168 148 172 104 140C100 136 106 122 112 126Z" fill="#14213d"/>
+      <text x="200" y="212" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="56" fill="#14213d" textLength="190" lengthAdjust="spacingAndGlyphs">CHIEF</text>
+      <text x="200" y="250" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="22" fill="#c8102e" textLength="380" lengthAdjust="spacingAndGlyphs">EMERGENCY CARE-KENYA</text>
+    </svg>
+  </a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#officials">Officials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<div class="ecg" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<div class="hero" id="home" aria-roledescription="carousel" aria-label="Hero carousel">
+  <div class="hero-content">
+    <h1>Professional Emergency Care Services and Training Across Kenya</h1>
+    <p>American Heart Association accredited training, on-site emergency care cover and partnerships that make communities safer.</p>
+    <a class="btn" href="#services">Our Services</a>
+    <a class="btn alt" href="#contact">Get in Touch</a>
+  </div>
+  <div class="dots" role="tablist" aria-label="Carousel navigation"></div>
+</div>
+
+<section id="about">
+<div class="wrap">
+  <h2>About Us</h2>
+  <p class="sub">Kenyan-based private organisation, serving institutions, schools, counties and communities.</p>
+  <p style="max-width:800px;margin:auto;text-align:center">Chief Emergency Care-Kenya (CECK) is an emergency care organisation led by licensed health professionals. We provide emergency care services and equip individuals and institutions with life-saving skills through AHA-accredited training, with a focus on quality, accessibility and measurable impact.</p>
+  <div class="stats" aria-hidden="true">
+    <div><b>AHA</b>Accredited</div>
+    <div><b>5</b>Core Courses</div>
+    <div><b>2</b>Branches: Nairobi &amp; Mombasa</div>
+  </div>
+</div>
+</section>
+
+<section id="services" class="alt-bg" aria-labelledby="services-heading">
+<div class="wrap">
+  <h2 id="services-heading">Our Services</h2>
+  <p class="sub">Emergency care services are our core focus.</p>
+  <div class="grid">
+    <div class="card"><h3>Emergency Care &amp; Event Medical Cover</h3><p>Trained first responders and stocked first aid kits for sports leagues, school events, conferences and community gatherings.</p></div>
+    <div class="card"><h3>Disaster Management Partnerships</h3><p>Working with organisations to prepare for, respond to and recover from disasters and mass-casualty events.</p></div>
+    <div class="card"><h3>Clinical Placements</h3><p>Supervised clinical placement opportunities for medical and nursing students.</p></div>
+    <div class="card"><h3>Corporate &amp; Workplace Safety</h3><p>Workplace first aid programmes, first aid kit supply and compliance support for employers.</p></div>
+    <div class="card"><h3>Community &amp; County Partnerships</h3><p>Training community health volunteers, nurses and clinical officers at preferential rates.</p></div>
+    <div class="card"><h3>School Programmes</h3><p>Modular first aid training for coaches and students, including holiday programmes.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="training">
+<div class="wrap">
+  <h2>Training Courses</h2>
+  <p class="sub">AHA-accredited life support courses and specialised programmes.</p>
+  <div class="grid">
+    <div class="card"><h3>First Aid</h3><p>General, sports, workplace and Psychological First Aid.</p></div>
+    <div class="card"><h3>BLS</h3><p>Basic Life Support for healthcare providers and laypersons.</p></div>
+    <div class="card"><h3>ACLS</h3><p>Advanced Cardiovascular Life Support for clinicians.</p></div>
+    <div class="card"><h3>PALS</h3><p>Pediatric Advanced Life Support.</p></div>
+    <div class="card"><h3>Nanny Training</h3><p>Childcare, child safety, infant and child first aid, choking response and emergency preparedness for nannies and home caregivers.</p></div>
+  </div>
+  <p style="text-align:center;margin-top:28px"><a class="btn" href="#contact">Book a Training</a></p>
+</div>
+</section>
+
+<section id="officials" class="alt-bg" aria-labelledby="officials-heading">
+<div class="wrap">
+  <h2 id="officials-heading">Our Officials</h2>
+  <p class="sub">The leadership team guiding CECK.</p>
+  <div class="grid">
+    <div class="card person">
+      <div class="avatar" aria-hidden="true">FO</div>
+      <h3>Felix Onyango</h3>
+      <div class="role">Director and Lead Instructor</div>
+      <p>Provides strategic direction and leads the delivery of CECK's training programmes.</p>
+    </div>
+    <div class="card person">
+      <div class="avatar" aria-hidden="true">BO</div>
+      <h3>Benard Ochola</h3>
+      <div class="role">Training Site Administrator</div>
+      <p>Oversees day-to-day operations.</p>
+    </div>
+    <div class="card person">
+      <div class="avatar" aria-hidden="true">SO</div>
+      <h3>Stephen Otieno</h3>
+      <div class="role">Chairperson</div>
+      <p>Chairs the organisation's leadership and guides its governance.</p>
+    </div>
+    <div class="card person">
+      <div class="avatar" aria-hidden="true">TO</div>
+      <h3>Trizah Otieno</h3>
+      <div class="role">Customer Service Support</div>
+      <p>First point of contact for enquiries, bookings and training requests.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="contact" aria-labelledby="contact-heading">
+<div class="wrap">
+  <h2 id="contact-heading">Contact Us</h2>
+  <p class="sub">Book a training, request event cover or propose a partnership.</p>
+  <form id="contactForm" aria-label="Contact form">
+    <label class="sr-only" for="f-name">Full name</label>
+    <input id="f-name" name="name" placeholder="Full name" required>
+    <label class="sr-only" for="f-email">Your email</label>
+    <input id="f-email" name="email" type="email" placeholder="Your email" required>
+    <label class="sr-only" for="f-phone">Your phone</label>
+    <input id="f-phone" name="phone" placeholder="Your phone">
+    <label class="sr-only" for="f-interest">Interest</label>
+    <select id="f-interest" name="interest" aria-label="I am interested in">
+      <option>Training</option>
+      <option>First Aid AED and CPR</option>
+      <option>Basic Life Support</option>
+      <option>Advanced Cardiovascular Life Support</option>
+      <option>Nanny training</option>
+      <option>Event medical cover</option>
+      <option>Partnership</option>
+      <option>Clinical placement</option>
+      <option>Other</option>
+    </select>
+    <label class="sr-only" for="f-message">Your message</label>
+    <textarea id="f-message" name="message" rows="5" placeholder="Your message" required></textarea>
+    <button class="send" type="submit">Send Message</button>
+  </form>
+  <p class="contact-info">Nairobi, Kenya &bull; Mombasa, Kenya<br>
+  Email: <a href="mailto:chiefemergencycare@gmail.com" rel="noopener">chiefemergencycare@gmail.com</a><br>
+  Phone: <a href="tel:+254119383200">0119 383 200</a> (Nairobi)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+254769279957">0769 279 957</a> (Mombasa)</p>
+</div>
+</section>
+</main>
+
+<footer>&copy; 2026 Chief Emergency Care-Kenya. All rights reserved. | AHA-accredited training provider<br>Nairobi: 0119 383 200 &bull; Mombasa: 0769 279 957 &bull; chiefemergencycare@gmail.com</footer>
+
+<!-- JSON-LD organization (improves SEO for organization & contact info) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Chief Emergency Care-Kenya","url":"https://your-site.example/","logo":"https://your-site.example/favicon.ico","contactPoint":[{"@type":"ContactPoint","telephone":"+254119383200","contactType":"customer service","areaServed":"KE"}],"sameAs":[]}
+</script>
+
+<script>
+/* Carousel with improved accessibility and reduced-motion respect */
+(function(){
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const dotsBox = document.querySelector('.dots');
+  let idx = 0;
+  let timer = null;
+  const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // create dots with accessible attributes
+  slides.forEach((_, n) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', 'Slide ' + (n + 1));
+    b.setAttribute('role','tab');
+    b.setAttribute('aria-selected','false');
+    b.addEventListener('click', () => { show(n); restart(); });
+    dotsBox.appendChild(b);
+  });
+  const dots = Array.from(dotsBox.querySelectorAll('button'));
+
+  function setAriaForSlide(i, active) {
+    const s = slides[i];
+    s.classList.toggle('active', active);
+    s.setAttribute('aria-hidden', String(!active));
+    dots[i].classList.toggle('active', active);
+    dots[i].setAttribute('aria-pressed', String(active));
+    dots[i].setAttribute('aria-selected', String(active));
+    if (active) dots[i].setAttribute('aria-current','true'); else dots[i].removeAttribute('aria-current');
+  }
+
+  function show(n) {
+    if (n < 0) n = slides.length - 1;
+    if (n >= slides.length) n = 0;
+    setAriaForSlide(idx, false);
+    idx = n;
+    setAriaForSlide(idx, true);
+  }
+
+  function next() { show((idx + 1) % slides.length); }
+
+  function restart() {
+    if (timer) clearInterval(timer);
+    if (prefersReduce) return;
+    timer = setInterval(next, 5000);
+  }
+
+  // Pause auto-advance on user interaction
+  const hero = document.querySelector('.hero');
+  hero.addEventListener('mouseenter', () => clearInterval(timer));
+  hero.addEventListener('focusin', () => clearInterval(timer));
+  hero.addEventListener('mouseleave', () => restart());
+  hero.addEventListener('focusout', () => restart());
+
+  // Keyboard controls: left/right arrows to navigate
+  hero.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { show(idx - 1); restart(); }
+    if (e.key === 'ArrowRight') { show(idx + 1); restart(); }
+  });
+
+  // Initialize
+  show(0);
+  restart();
+
+  // Improve slide semantics for screen readers: keep role labels from data attribute (already set in markup)
+})();
+
+/* Contact form: compose mailto for simple fallback.
+   Use form fields and validate basic presence - the browser still enforces required.
+*/
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const v = id => (document.getElementById(id) || {}).value || '';
+  const subject = 'Website enquiry: ' + v('f-interest');
+  const body = 'Name: ' + v('f-name') + '\nEmail: ' + v('f-email') + '\nPhone: ' + v('f-phone') + '\n\n' + v('f-message');
+  // mailto fallback - user agent will open default mail client
+  window.location.href = 'mailto:chiefemergencycare@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
