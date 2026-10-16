@@ -1,322 +1,1666 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Chief Emergency Care-Kenya | Emergency Care Services &amp; Training</title>
-<meta name="description" content="Chief Emergency Care-Kenya (CECK): emergency care services, event medical cover and AHA-accredited First Aid, BLS, ACLS and PALS training.">
-<meta name="theme-color" content="#14213d">
-<link rel="icon" href="/favicon.ico">
-<style>
-:root{--red:#c8102e;--dark:#14213d;--mid:#1b2d52;--text:#2b2f36}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Segoe UI,Arial,sans-serif;color:#e6ebf5;line-height:1.6;background:var(--dark)}
-a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:20}
-nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:8px 20px;flex-wrap:wrap;gap:8px}
-.logo{display:flex;align-items:center;}
-.logo svg{height:48px;width:auto;margin-right:12px;}
-nav ul{display:flex;gap:20px;list-style:none;font-size:.95rem;font-weight:600;flex-wrap:wrap;color:var(--dark)}
-nav ul a:hover{color:var(--red)}
-.skip-link{position:absolute;left:8px;top:8px;background:#fff;color:var(--dark);padding:.5rem .75rem;border-radius:6px;z-index:30;transform:translateY(-120%);transition:transform .18s ease}
-.skip-link:focus{transform:translateY(0)}
-.ecg{height:28px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='76' height='28' viewBox='0 0 76 28'%3E%3Cpath d='M0 20H6C8 20 9 14 13 14C17 14 18 20 21 20H29L30.5 21.5L33.5 3L36.5 25L38 20H46C49 20 50 14 55 14C60 14 61 20 64 20H76' fill='none' stroke='%23c8102e' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") repeat-x;animation:ecgMove 2.1s linear infinite;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-@keyframes ecgMove{from{background-position:0 0}to{background-position:-76px 0}}
-@media(prefers-reduced-motion:reduce){.ecg{animation:none}}
-.hero{position:relative;color:#fff;text-align:center;padding:110px 20px 90px;overflow:hidden;background:var(--dark)}
-.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease-in-out}
-.slide.active{opacity:1}
-.hero::before{content:"";position:absolute;inset:0;background:rgba(20,33,61,.62);z-index:1}
-.hero-content{position:relative;z-index:2}
-.hero h1{font-size:2.3rem;max-width:780px;margin:auto}
-.hero p{max-width:640px;margin:16px auto 28px;opacity:.95}
-.dots{position:absolute;bottom:16px;left:0;right:0;z-index:3;display:flex;justify-content:center;gap:8px}
-.dots button{width:11px;height:11px;border-radius:50%;border:0;padding:0;background:rgba(255,255,255,.5);cursor:pointer}
-.dots button.active{background:var(--red);outline:3px solid rgba(200,16,46,.12)}
-.btn{display:inline-block;background:var(--red);color:#fff;padding:12px 28px;border-radius:6px;font-weight:600;margin:4px}
-.btn.alt{background:transparent;border:2px solid #fff}
-section{padding:64px 20px}
-.wrap{max-width:1100px;margin:auto}
-h2{color:#fff;font-size:1.8rem;text-align:center}
-h2::after{content:"";display:block;width:60px;height:4px;background:var(--red);margin:10px auto 0;border-radius:2px}
-.sub{text-align:center;color:#b8c4d9;margin:14px 0 36px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.card{background:#fff;color:var(--text);border-radius:10px;padding:24px;box-shadow:0 3px 12px rgba(0,0,0,.2);border-top:4px solid var(--red)}
-.card h3{color:var(--dark);margin-bottom:8px;font-size:1.1rem}
-.alt-bg{background:var(--mid)}
-.person{text-align:center}
-.avatar{width:110px;height:110px;border-radius:50%;background:#dfe5ee;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--dark);font-weight:700;overflow:hidden}
-.avatar img{width:100%;height:100%;object-fit:cover}
-.role{color:var(--red);font-weight:600;font-size:.9rem;margin-bottom:8px}
-.stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:30px;text-align:center}
-.stats b{display:block;font-size:1.8rem;color:#ff6b81}
-form{max-width:560px;margin:auto;display:grid;gap:12px}
-input,textarea,select{padding:12px;border:1px solid #ccd;border-radius:6px;font:inherit;width:100%;color:var(--text);background:#fff}
-button.send{background:var(--red);color:#fff;border:0;padding:13px;border-radius:6px;font-size:1rem;cursor:pointer}
-button.send:hover{background:#a50d25}
-.contact-info{text-align:center;margin-top:24px;color:#cfd6e4}
-.contact-info a{color:#ff6b81;font-weight:600}
-footer{background:#0d1730;color:#cfd6e4;text-align:center;padding:28px 20px;font-size:.9rem}
-.sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-button:focus, a:focus, input:focus, select:focus, textarea:focus{outline:3px solid rgba(255,255,255,.12);outline-offset:2px}
-@media(max-width:600px){.hero h1{font-size:1.7rem}.hero{padding:80px 16px 70px}nav{justify-content:center}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Chief Emergency Care-Kenya | Emergency Care Services &amp; Training</title>
+  <meta name="description"
+    content="Chief Emergency Care-Kenya (CECK): premier emergency care services, event medical cover and AHA-accredited First Aid, BLS, ACLS and PALS training in Nairobi and Mombasa.">
+  <meta name="theme-color" content="#0a1128">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --red: #c8102e;
+      --red-hover: #e01937;
+      --red-light: rgba(200, 16, 46, 0.12);
+      --dark: #0a1128;
+      --mid: #14213d;
+      --card-bg: #1c2b4c;
+      --light-bg: #f8fafc;
+      --text-main: #f0f4fc;
+      --text-muted: #a6b4cc;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.15);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.25);
+      --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.35);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-main);
+      line-height: 1.65;
+      background-color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.25s ease;
+    }
+
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      background: var(--red);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      z-index: 1000;
+      transform: translateY(-150%);
+      transition: transform 0.25s ease;
+      font-weight: 600;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    /* ==================== HEADER & NAVIGATION ==================== */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      z-index: 900;
+      border-bottom: 2px solid rgba(200, 16, 46, 0.15);
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      position: relative;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 1001;
+    }
+
+    .logo-img {
+      height: 56px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      border-radius: 6px;
+      transition: transform 0.25s ease;
+    }
+
+    .logo-link:hover .logo-img {
+      transform: scale(1.03);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--mid);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    .brand-subtitle {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--red);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Desktop Navigation List */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: var(--mid);
+      font-weight: 600;
+      font-size: 0.95rem;
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--red);
+      transition: width 0.25s ease;
+      border-radius: 2px;
+    }
+
+    .nav-menu a:hover {
+      color: var(--red);
+    }
+
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      background: var(--red);
+      color: #fff !important;
+      padding: 9px 20px !important;
+      border-radius: 50px;
+      font-weight: 700 !important;
+      box-shadow: 0 4px 14px rgba(200, 16, 46, 0.35);
+      transition: transform 0.2s, background 0.2s, box-shadow 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--red-hover) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(200, 16, 46, 0.45);
+    }
+
+    .nav-cta::after {
+      display: none !important;
+    }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1001;
+      width: 44px;
+      height: 44px;
+      position: relative;
+      border-radius: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hamburger:focus {
+      outline: 2px solid var(--red);
+    }
+
+    .hamburger-box {
+      width: 26px;
+      height: 20px;
+      position: relative;
+      display: block;
+    }
+
+    .hamburger-line {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: var(--mid);
+      border-radius: 3px;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      left: 0;
+    }
+
+    .hamburger-line:nth-child(1) {
+      top: 0;
+    }
+
+    .hamburger-line:nth-child(2) {
+      top: 8.5px;
+    }
+
+    .hamburger-line:nth-child(3) {
+      top: 17px;
+    }
+
+    /* Hamburger Open State */
+    .hamburger.active .hamburger-line {
+      background-color: #fff;
+    }
+
+    .hamburger.active .hamburger-line:nth-child(1) {
+      top: 8.5px;
+      transform: rotate(45deg);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(3) {
+      top: 8.5px;
+      transform: rotate(-45deg);
+    }
+
+    /* ECG Animated Line */
+    .ecg {
+      height: 26px;
+      background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='76' height='26' viewBox='0 0 76 26'%3E%3Cpath d='M0 18H6C8 18 9 12 13 12C17 12 18 18 21 18H29L30.5 19.5L33.5 2L36.5 23L38 18H46C49 18 50 12 55 12C60 12 61 18 64 18H76' fill='none' stroke='%23c8102e' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") repeat-x;
+      animation: ecgMove 2.2s linear infinite;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    @keyframes ecgMove {
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: -76px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ecg {
+        animation: none;
+      }
+    }
+
+    /* ==================== HERO SECTION (FULL SCREEN) ==================== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 100px);
+      min-height: 640px;
+      max-height: 980px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      background-color: var(--dark);
+    }
+
+    /* Slide Images - Full viewport coverage, zero stretching */
+    .slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 7s ease-out;
+      transform: scale(1.04);
+      pointer-events: none;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+    }
+
+    /* Sleek Dual Gradient Overlay for Maximum Readability */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+          rgba(10, 17, 40, 0.78) 0%,
+          rgba(10, 17, 40, 0.65) 50%,
+          rgba(10, 17, 40, 0.88) 100%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200, 16, 46, 0.25);
+      border: 1px solid rgba(200, 16, 46, 0.6);
+      backdrop-filter: blur(8px);
+      color: #ff94a2;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 8px 18px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+    }
+
+    .hero-badge .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--red);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--red);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+      }
+
+      50% {
+        transform: scale(1.3);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+      }
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.1rem, 4.2vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.18;
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 span {
+      color: #ff4d6d;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 1.8vw, 1.22rem);
+      max-width: 720px;
+      margin: 0 auto 32px;
+      color: #e2e8f0;
+      line-height: 1.7;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--red);
+      color: #fff;
+      padding: 14px 34px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 24px rgba(200, 16, 46, 0.35);
+      border: 2px solid transparent;
+    }
+
+    .btn:hover {
+      background: var(--red-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(200, 16, 46, 0.5);
+    }
+
+    .btn.alt {
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn.alt:hover {
+      background: #ffffff;
+      color: var(--dark);
+      border-color: #ffffff;
+    }
+
+    /* Carousel Arrow Controls */
+    .carousel-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(10, 17, 40, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 4;
+      backdrop-filter: blur(6px);
+      transition: all 0.25s ease;
+    }
+
+    .carousel-nav-btn:hover {
+      background: var(--red);
+      border-color: var(--red);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .carousel-nav-btn.prev {
+      left: 24px;
+    }
+
+    .carousel-nav-btn.next {
+      right: 24px;
+    }
+
+    /* Carousel Indicators Dots */
+    .dots {
+      position: absolute;
+      bottom: 24px;
+      left: 0;
+      right: 0;
+      z-index: 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dots button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      padding: 0;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dots button.active {
+      background: var(--red);
+      border-color: var(--red);
+      width: 32px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(200, 16, 46, 0.7);
+    }
+
+    /* ==================== GENERAL SECTIONS ==================== */
+    section {
+      padding: 90px 24px;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      font-weight: 800;
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 64px;
+      height: 4px;
+      background: var(--red);
+      margin: 14px auto 0;
+      border-radius: 4px;
+    }
+
+    .sub {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 680px;
+      margin: 16px auto 0;
+      line-height: 1.6;
+    }
+
+    .alt-bg {
+      background: #0f1933;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    /* Card Design */
+    .card {
+      background: var(--card-bg);
+      color: var(--text-main);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--red);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(200, 16, 46, 0.4);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(200, 16, 46, 0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: #ff6b81;
+    }
+
+    .card h3 {
+      color: #ffffff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.35;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      flex-grow: 1;
+    }
+
+    /* Course Specific Cards */
+    .course-card .badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(200, 16, 46, 0.18);
+      color: #ff8093;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(200, 16, 46, 0.3);
+    }
+
+    /* About Section Highlight Stats */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .stat-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease;
+    }
+
+    .stat-box:hover {
+      transform: translateY(-4px);
+      border-color: rgba(200, 16, 46, 0.35);
+    }
+
+    .stat-box b {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #ff4d6d;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .stat-box span {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* ==================== OFFICIALS SECTION ==================== */
+    /* Rectangular design, image completely fills container without white/empty space, INFINITE BOUNCY BOUNCY */
+    .card.person {
+      text-align: center;
+      padding: 24px;
+      border-top: 4px solid var(--red);
+      background: var(--card-bg);
+    }
+
+    .avatar {
+      width: 100%;
+      max-width: 250px;
+      height: 290px;
+      border-radius: 14px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+      border: 3px solid rgba(255, 255, 255, 0.15);
+      background: #0a1128;
+      position: relative;
+      /* Infinite Bouncy Bouncy Animation */
+      animation: bouncyBouncy 3.4s ease-in-out infinite;
+      transform-origin: center bottom;
+    }
+
+    /* Staggered bouncing wave */
+    .grid .person:nth-child(1) .avatar {
+      animation-delay: 0s;
+    }
+
+    .grid .person:nth-child(2) .avatar {
+      animation-delay: 0.85s;
+    }
+
+    .grid .person:nth-child(3) .avatar {
+      animation-delay: 1.7s;
+    }
+
+    .grid .person:nth-child(4) .avatar {
+      animation-delay: 2.55s;
+    }
+
+    @keyframes bouncyBouncy {
+
+      0%,
+      100% {
+        transform: translateY(0);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+      }
+
+      50% {
+        transform: translateY(-16px);
+        box-shadow: 0 24px 36px rgba(200, 16, 46, 0.25);
+      }
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .card.person:hover .avatar img {
+      transform: scale(1.04);
+    }
+
+    .person h3 {
+      font-size: 1.25rem;
+      margin-bottom: 4px;
+    }
+
+    .role {
+      color: #ff6b81;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    .person p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* ==================== CONTACT SECTION ==================== */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-card-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-card-item h4 {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-card-item p,
+    .contact-card-item a {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .contact-card-item a {
+      color: #ff6b81;
+      font-weight: 600;
+    }
+
+    .contact-card-item a:hover {
+      text-decoration: underline;
+      color: #ffa1af;
+    }
+
+    .contact-form-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 36px;
+      box-shadow: var(--shadow-md);
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    input,
+    textarea,
+    select {
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.95rem;
+      width: 100%;
+      color: #ffffff;
+      background: #111a31;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #74839e;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.25);
+      background: #14203d;
+    }
+
+    button.send {
+      background: var(--red);
+      color: #fff;
+      border: 0;
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 20px rgba(200, 16, 46, 0.4);
+      margin-top: 8px;
+    }
+
+    button.send:hover {
+      background: var(--red-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(200, 16, 46, 0.55);
+    }
+
+    /* ==================== FOOTER ==================== */
+    footer {
+      background: #060b19;
+      color: var(--text-muted);
+      padding: 48px 24px 32px;
+      font-size: 0.92rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    /* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+    @media (max-width: 860px) {
+      .nav-container {
+        padding: 10px 20px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      /* Full Screen Mobile Navigation Menu */
+      .nav-menu {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(10, 17, 40, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+      }
+
+      .nav-menu.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .nav-menu li {
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-menu a {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #ffffff;
+        display: inline-block;
+        padding: 10px 24px;
+      }
+
+      .nav-menu a:hover {
+        color: #ff4d6d;
+      }
+
+      .nav-menu .nav-cta {
+        font-size: 1.25rem !important;
+        padding: 14px 36px !important;
+        margin-top: 12px;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .brand-title {
+        font-size: 1rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.65rem;
+      }
+
+      .logo-img {
+        height: 44px;
+      }
+
+      .hero {
+        height: 90vh;
+        min-height: 560px;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .hero p {
+        font-size: 0.98rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .carousel-nav-btn {
+        display: none;
+      }
+
+      section {
+        padding: 64px 16px;
+      }
+
+      .contact-form-container {
+        padding: 24px 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-<nav aria-label="Primary">
-  <a href="#home" class="logo" aria-label="Chief Emergency Care-Kenya home">
-    <svg height="64" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chief Emergency Care-Kenya logo">
-      <path d="M200 132C150 102 104 72 118 38C132 8 184 14 200 46C216 14 268 8 282 38C296 72 250 102 200 132Z" fill="none" stroke="#c8102e" stroke-width="7" stroke-linejoin="round"/>
-      <rect x="158" y="58" width="84" height="36" rx="9" fill="#14213d"/>
-      <rect x="182" y="36" width="36" height="80" rx="9" fill="#14213d"/>
-      <path d="M166 76H189L195 64L203 90L209 72L213 76H234" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M112 126C150 152 205 150 258 116C266 112 273 121 265 128C218 168 148 172 104 140C100 136 106 122 112 126Z" fill="#14213d"/>
-      <text x="200" y="212" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="56" fill="#14213d" textLength="190" lengthAdjust="spacingAndGlyphs">CHIEF</text>
-      <text x="200" y="250" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="22" fill="#c8102e" textLength="380" lengthAdjust="spacingAndGlyphs">EMERGENCY CARE-KENYA</text>
-    </svg>
-  </a>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#training">Training</a></li>
-    <li><a href="#officials">Officials</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-<div class="ecg" aria-hidden="true"></div>
-</header>
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo-link" aria-label="Chief Emergency Care-Kenya home">
+        <img src="logo/logo.jpeg" alt="Chief Emergency Care-Kenya Logo" class="logo-img">
+        <div class="brand-text">
+          <span class="brand-title">Chief Emergency Care</span>
+          <span class="brand-subtitle">Kenya &bull; AHA Accredited</span>
+        </div>
+      </a>
 
-<main id="main">
-<div class="hero" id="home" aria-roledescription="carousel" aria-label="Hero carousel">
-  <div class="slide" role="img" aria-label="Slide 1" style="background-image:url('slides/slide (1).jpeg')"></div>
-  <div class="slide" role="img" aria-label="Slide 2" style="background-image:url('slides/slide (2).jpeg')"></div>
-  <div class="slide" role="img" aria-label="Slide 3" style="background-image:url('slides/slide (3).jpeg')"></div>
-  <div class="slide" role="img" aria-label="Slide 4" style="background-image:url('slides/slide (4).jpeg')"></div>
-  <div class="slide" role="img" aria-label="Slide 5" style="background-image:url('slides/slide (5).jpeg')"></div>
-  <div class="slide" role="img" aria-label="Slide 6" style="background-image:url('slides/slide (6).jpeg')"></div>
-  <div class="slide" role="img" aria-label="Slide 7" style="background-image:url('slides/slide (7).jpeg')"></div>
-  <div class="slide" role="img" aria-label="Slide 8" style="background-image:url('slides/slide (8).jpeg')"></div>
-  <div class="slide" role="img" aria-label="Slide 9" style="background-image:url('slides/slide (9).jpeg')"></div>
-  <div class="slide" role="img" aria-label="Slide 10" style="background-image:url('slides/slide (10).jpeg')"></div>
-  <div class="slide" role="img" aria-label="Slide 11" style="background-image:url('slides/slide (11).jpeg')"></div>
-  <div class="slide" role="img" aria-label="Slide 12" style="background-image:url('slides/slide (12).jpeg')"></div>
-  <div class="hero-content">
-    <h1>Professional Emergency Care Services and Training Across Kenya</h1>
-    <p>American Heart Association accredited training, on-site emergency care cover and partnerships that make communities safer.</p>
-    <a class="btn" href="#services">Our Services</a>
-    <a class="btn alt" href="#contact">Get in Touch</a>
-  </div>
-  <div class="dots" role="tablist" aria-label="Carousel navigation"></div>
-</div>
+      <!-- Hamburger Toggle Button for Small Screens -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="navList">
+        <span class="hamburger-box">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </span>
+      </button>
 
-<section id="about">
-<div class="wrap">
-  <h2>About Us</h2>
-  <p class="sub">Kenyan-based private organisation, serving institutions, schools, counties and communities.</p>
-  <p style="max-width:800px;margin:auto;text-align:center">Chief Emergency Care-Kenya (CECK) is an emergency care organisation led by licensed health professionals. We provide emergency care services and equip individuals and institutions with life-saving skills through AHA-accredited training, with a focus on quality, accessibility and measurable impact.</p>
-  <div class="stats" aria-hidden="true">
-    <div><b>AHA</b>Accredited</div>
-    <div><b>5</b>Core Courses</div>
-    <div><b>2</b>Branches: Nairobi &amp; Mombasa</div>
-  </div>
-</div>
-</section>
-
-<section id="services" class="alt-bg" aria-labelledby="services-heading">
-<div class="wrap">
-  <h2 id="services-heading">Our Services</h2>
-  <p class="sub">Emergency care services are our core focus.</p>
-  <div class="grid">
-    <div class="card"><h3>Emergency Care &amp; Event Medical Cover</h3><p>Trained first responders and stocked first aid kits for sports leagues, school events, conferences and community gatherings.</p></div>
-    <div class="card"><h3>Disaster Management Partnerships</h3><p>Working with organisations to prepare for, respond to and recover from disasters and mass-casualty events.</p></div>
-    <div class="card"><h3>Clinical Placements</h3><p>Supervised clinical placement opportunities for medical and nursing students.</p></div>
-    <div class="card"><h3>Corporate &amp; Workplace Safety</h3><p>Workplace first aid programmes, first aid kit supply and compliance support for employers.</p></div>
-    <div class="card"><h3>Community &amp; County Partnerships</h3><p>Training community health volunteers, nurses and clinical officers at preferential rates.</p></div>
-    <div class="card"><h3>School Programmes</h3><p>Modular first aid training for coaches and students, including holiday programmes.</p></div>
-  </div>
-</div>
-</section>
-
-<section id="training">
-<div class="wrap">
-  <h2>Training Courses</h2>
-  <p class="sub">AHA-accredited life support courses and specialised programmes.</p>
-  <div class="grid">
-    <div class="card"><h3>First Aid</h3><p>General, sports, workplace and Psychological First Aid.</p></div>
-    <div class="card"><h3>BLS</h3><p>Basic Life Support for healthcare providers and laypersons.</p></div>
-    <div class="card"><h3>ACLS</h3><p>Advanced Cardiovascular Life Support for clinicians.</p></div>
-    <div class="card"><h3>PALS</h3><p>Pediatric Advanced Life Support.</p></div>
-    <div class="card"><h3>Nanny Training</h3><p>Childcare, child safety, infant and child first aid, choking response and emergency preparedness for nannies and home caregivers.</p></div>
-  </div>
-  <p style="text-align:center;margin-top:28px"><a class="btn" href="#contact">Book a Training</a></p>
-</div>
-</section>
-
-<section id="officials" class="alt-bg" aria-labelledby="officials-heading">
-<div class="wrap">
-  <h2 id="officials-heading">Our Officials</h2>
-  <p class="sub">The leadership team guiding CECK.</p>
-  <div class="grid">
-    <div class="card person">
-      <div class="avatar">
-        <img src="team/Felix Onyango.jpeg" alt="Felix Onyango">
-      </div>
-      <h3>Felix Onyango</h3>
-      <div class="role">Director and Lead Instructor</div>
-      <p>Provides strategic direction and leads the delivery of CECK's training programmes.</p>
+      <!-- Navigation Menu (Full Screen on Mobile) -->
+      <ul class="nav-menu" id="navList">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#officials">Officials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Book Training</a></li>
+      </ul>
     </div>
-    <div class="card person">
-      <div class="avatar">
-        <img src="team/Benard Ochola.jpeg" alt="Benard Ochola">
-      </div>
-      <h3>Benard Ochola</h3>
-      <div class="role">Training Site Administrator</div>
-      <p>Oversees day-to-day operations.</p>
-    </div>
-    <div class="card person">
-      <div class="avatar">
-        <img src="team/Stephen Otieno.jpeg" alt="Stephen Otieno">
-      </div>
-      <h3>Stephen Otieno</h3>
-      <div class="role">Chairperson</div>
-      <p>Chairs the organisation's leadership and guides its governance.</p>
-    </div>
-    <div class="card person">
-      <div class="avatar">
-        <img src="team/Trizah Otieno.jpeg" alt="Trizah Otieno">
-      </div>
-      <h3>Trizah Otieno</h3>
-      <div class="role">Customer Service Support</div>
-      <p>First point of contact for enquiries, bookings and training requests.</p>
-    </div>
-  </div>
-</div>
-</section>
+    <div class="ecg" aria-hidden="true"></div>
+  </header>
 
-<section id="contact" aria-labelledby="contact-heading">
-<div class="wrap">
-  <h2 id="contact-heading">Contact Us</h2>
-  <p class="sub">Book a training, request event cover or propose a partnership.</p>
-  <form id="contactForm" aria-label="Contact form">
-    <label class="sr-only" for="f-name">Full name</label>
-    <input id="f-name" name="name" placeholder="Full name" required>
-    <label class="sr-only" for="f-email">Your email</label>
-    <input id="f-email" name="email" type="email" placeholder="Your email" required>
-    <label class="sr-only" for="f-phone">Your phone</label>
-    <input id="f-phone" name="phone" placeholder="Your phone">
-    <label class="sr-only" for="f-interest">Interest</label>
-    <select id="f-interest" name="interest" aria-label="I am interested in">
-      <option>Training</option>
-      <option>First Aid AED and CPR</option>
-      <option>Basic Life Support</option>
-      <option>Advanced Cardiovascular Life Support</option>
-      <option>Nanny training</option>
-      <option>Event medical cover</option>
-      <option>Partnership</option>
-      <option>Clinical placement</option>
-      <option>Other</option>
-    </select>
-    <label class="sr-only" for="f-message">Your message</label>
-    <textarea id="f-message" name="message" rows="5" placeholder="Your message" required></textarea>
-    <button class="send" type="submit">Send Message</button>
-  </form>
-  <p class="contact-info">Nairobi, Kenya &bull; Mombasa, Kenya<br>
-  Email: <a href="mailto:chiefemergencycare@gmail.com" rel="noopener">chiefemergencycare@gmail.com</a><br>
-  Phone: <a href="tel:+254119383200">0119 383 200</a> (Nairobi)<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+254769279957">0769 279 957</a> (Mombasa)</p>
-</div>
-</section>
-</main>
+  <main id="main">
+    <!-- ==================== HERO SECTION ==================== -->
+    <div class="hero" id="home" aria-roledescription="carousel" aria-label="Hero carousel">
+      <!-- Slide Images (Full Screen, Cover, No Stretching) -->
+      <div class="slide active" role="img" aria-label="Emergency Medical Training 1"
+        style="background-image:url('slides/slide (1).jpeg')"></div>
+      <div class="slide" role="img" aria-label="Emergency Care Services 2"
+        style="background-image:url('slides/slide (2).jpeg')"></div>
+      <div class="slide" role="img" aria-label="Hands-on CPR Training 3"
+        style="background-image:url('slides/slide (3).jpeg')"></div>
+      <div class="slide" role="img" aria-label="Event Medical Cover 4"
+        style="background-image:url('slides/slide (4).jpeg')"></div>
+      <div class="slide" role="img" aria-label="First Aid Simulation 5"
+        style="background-image:url('slides/slide (5).jpeg')"></div>
+      <div class="slide" role="img" aria-label="Certified Instructors 6"
+        style="background-image:url('slides/slide (6).jpeg')"></div>
+      <div class="slide" role="img" aria-label="Medical Response Team 7"
+        style="background-image:url('slides/slide (7).jpeg')"></div>
+      <div class="slide" role="img" aria-label="Workplace Safety Training 8"
+        style="background-image:url('slides/slide (8).jpeg')"></div>
+      <div class="slide" role="img" aria-label="Life Support Demonstration 9"
+        style="background-image:url('slides/slide (9).jpeg')"></div>
+      <div class="slide" role="img" aria-label="Advanced Pediatric Care 10"
+        style="background-image:url('slides/slide (10).jpeg')"></div>
+      <div class="slide" role="img" aria-label="Community Training Session 11"
+        style="background-image:url('slides/slide (11).jpeg')"></div>
+      <div class="slide" role="img" aria-label="Emergency Response Exercise 12"
+        style="background-image:url('slides/slide (12).jpeg')"></div>
 
-<footer>&copy; 2026 Chief Emergency Care-Kenya. All rights reserved. | AHA-accredited training provider<br>Nairobi: 0119 383 200 &bull; Mombasa: 0769 279 957 &bull; chiefemergencycare@gmail.com</footer>
+      <!-- Dual Tone Dark Overlay -->
+      <div class="hero-overlay"></div>
 
-<!-- JSON-LD organization (improves SEO for organization & contact info) -->
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Chief Emergency Care-Kenya","url":"https://your-site.example/","logo":"https://your-site.example/favicon.ico","contactPoint":[{"@type":"ContactPoint","telephone":"+254119383200","contactType":"customer service","areaServed":"KE"}],"sameAs":[]}
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          AHA-Accredited Emergency Care Provider
+        </div>
+        <h1>Professional Emergency Care &amp; Life Support <span>Across Kenya</span></h1>
+        <p>Empowering healthcare professionals, corporate teams, and communities with life-saving skills through
+          American Heart Association accredited training and dedicated on-site emergency cover.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#services">Explore Our Services</a>
+          <a class="btn alt" href="#training">View Training Courses</a>
+        </div>
+      </div>
+
+      <!-- Carousel Navigation Controls -->
+      <button class="carousel-nav-btn prev" id="prevSlideBtn" aria-label="Previous Slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <button class="carousel-nav-btn next" id="nextSlideBtn" aria-label="Next Slide">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- Carousel Indicators -->
+      <div class="dots" role="tablist" aria-label="Carousel navigation"></div>
+    </div>
+
+    <!-- ==================== ABOUT US SECTION ==================== -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>About Chief Emergency Care</h2>
+          <p class="sub">Kenyan-based private medical training and emergency response organisation serving institutions,
+            schools, county governments, and communities nationwide.</p>
+        </div>
+
+        <div
+          style="max-width: 860px; margin: 0 auto; text-align: center; color: #cbd5e1; font-size: 1.08rem; line-height: 1.8;">
+          <p>Chief Emergency Care-Kenya (CECK) is led by certified, experienced health professionals and instructors. We
+            deliver rapid on-site emergency care and equip individuals and organisations with world-class, life-saving
+            competencies through American Heart Association (AHA) accredited courses. Our mission is centered on
+            uncompromising quality, prompt response, and measurable life-saving impact.</p>
+        </div>
+
+        <div class="stats" aria-hidden="true">
+          <div class="stat-box">
+            <b>AHA</b>
+            <span>Accredited Training Site</span>
+          </div>
+          <div class="stat-box">
+            <b>5+</b>
+            <span>Core Life Support Courses</span>
+          </div>
+          <div class="stat-box">
+            <b>2</b>
+            <span>Hubs: Nairobi &amp; Mombasa</span>
+          </div>
+          <div class="stat-box">
+            <b>24/7</b>
+            <span>Emergency Standby Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="alt-bg" aria-labelledby="services-heading">
+      <div class="wrap">
+        <div class="section-header">
+          <h2 id="services-heading">Our Services</h2>
+          <p class="sub">Comprehensive emergency response, medical standby cover, and specialised healthcare capacity
+            building.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                </path>
+              </svg>
+            </div>
+            <h3>Emergency Care &amp; Event Medical Cover</h3>
+            <p>Rapidly deployed first responders, certified EMTs, fully stocked trauma kits, and ambulances for sports
+              tournaments, corporate events, conferences, and mass gatherings.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Disaster Management Partnerships</h3>
+            <p>Collaborating with local authorities, NGOs, and corporations to formulate contingency response frameworks
+              and manage mass-casualty scenarios effectively.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h3>Clinical Placements &amp; Mentorship</h3>
+            <p>Hands-on clinical attachments and supervised trauma/emergency field placements tailored for nursing,
+              medical, and clinical medicine students.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3>Corporate &amp; Workplace Safety</h3>
+            <p>OSHA-compliant workplace first aid training, routine safety audits, AED installation, and certified
+              medical first-aid cabinet restocking for businesses.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Community &amp; County Health Initiatives</h3>
+            <p>Empowering community health promoters (CHPs), public clinic nurses, and first responders with subsidized
+              accredited resuscitation certifications.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3>School &amp; Youth Safety Programmes</h3>
+            <p>Child CPR, choking intervention, sports injury care, and modular safety education customized for school
+              teachers, sports coaches, and students.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TRAINING COURSES SECTION ==================== -->
+    <section id="training">
+      <div class="wrap">
+        <div class="section-header">
+          <h2>AHA-Accredited Courses &amp; Certifications</h2>
+          <p class="sub">Internationally recognized life support programs delivered by licensed AHA instructors with
+            official certification upon completion.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card course-card">
+            <span class="badge">AHA Certified</span>
+            <h3>First Aid, CPR &amp; AED</h3>
+            <p>Master the fundamentals of prompt bleeding control, fracture stabilization, burn care, and automated
+              external defibrillator (AED) operation for adults, children, and infants.</p>
+          </div>
+
+          <div class="card course-card">
+            <span class="badge">AHA Healthcare</span>
+            <h3>Basic Life Support (BLS)</h3>
+            <p>Core resuscitation protocol training for doctors, nurses, paramedics, and allied healthcare practitioners
+              emphasizing high-quality CPR and multi-rescuer team dynamics.</p>
+          </div>
+
+          <div class="card course-card">
+            <span class="badge">Advanced Clinical</span>
+            <h3>ACLS (Adv. Cardiovascular Life Support)</h3>
+            <p>Advanced diagnostic and pharmacology interventions for cardiopulmonary arrest, acute coronary syndromes,
+              and life-threatening dysrhythmias.</p>
+          </div>
+
+          <div class="card course-card">
+            <span class="badge">Pediatric Focus</span>
+            <h3>PALS (Pediatric Adv. Life Support)</h3>
+            <p>Specialized assessment and systematic approach to managing critically ill pediatric patients experiencing
+              respiratory distress or circulatory shock.</p>
+          </div>
+
+          <div class="card course-card">
+            <span class="badge">Specialized Home Care</span>
+            <h3>Nanny &amp; Caregiver Emergency Training</h3>
+            <p>Comprehensive domestic child safety, infant CPR, choking relief, burn management, poisoning prevention,
+              and emergency home readiness for nannies and parents.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;">
+          <a class="btn" href="#contact">Book Course / Request Quotation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OFFICIALS / LEADERSHIP SECTION ==================== -->
+    <!-- Rectangular photos with image completely filling container without empty white spaces + Infinite Bouncy Bouncy -->
+    <section id="officials" class="alt-bg" aria-labelledby="officials-heading">
+      <div class="wrap">
+        <div class="section-header">
+          <h2 id="officials-heading">Our Leadership Team</h2>
+          <p class="sub">Meet the dedicated health practitioners and directors steering Chief Emergency Care-Kenya.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card person">
+            <div class="avatar">
+              <img src="team/Felix Onyango.jpeg" alt="Felix Onyango - Director and Lead Instructor">
+            </div>
+            <h3>Felix Onyango</h3>
+            <div class="role">Director &amp; Lead Instructor</div>
+            <p>Provides strategic leadership, clinical oversight, and leads delivery of accredited life support courses
+              across Kenya.</p>
+          </div>
+
+          <div class="card person">
+            <div class="avatar">
+              <img src="team/Benard Ochola.jpeg" alt="Benard Ochola - Training Site Administrator">
+            </div>
+            <h3>Benard Ochola</h3>
+            <div class="role">Training Site Administrator</div>
+            <p>Oversees operational logistics, student certification processing, equipment readiness, and branch
+              management.</p>
+          </div>
+
+          <div class="card person">
+            <div class="avatar">
+              <img src="team/Stephen Otieno.jpeg" alt="Stephen Otieno - Chairperson">
+            </div>
+            <h3>Stephen Otieno</h3>
+            <div class="role">Chairperson</div>
+            <p>Guides corporate governance, institutional partnerships, strategic compliance, and community outreach.
+            </p>
+          </div>
+
+          <div class="card person">
+            <div class="avatar">
+              <img src="team/Trizah Otieno.jpeg" alt="Trizah Otieno - Customer Service Support">
+            </div>
+            <h3>Trizah Otieno</h3>
+            <div class="role">Customer Service &amp; Client Support</div>
+            <p>Direct point of contact for corporate enquiries, course scheduling, quotation requests, and customer
+              assistance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT US SECTION ==================== -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="wrap">
+        <div class="section-header">
+          <h2 id="contact-heading">Contact &amp; Bookings</h2>
+          <p class="sub">Ready to schedule a training, request event medical standby, or partner with CECK? Reach out
+            today.</p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Direct Contact Info -->
+          <div class="contact-cards">
+            <div class="contact-card-item">
+              <h4>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff4d6d" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                Telephone Helplines
+              </h4>
+              <p><strong>Nairobi Office:</strong> <a href="tel:+254119383200">0119 383 200</a></p>
+              <p><strong>Mombasa Branch:</strong> <a href="tel:+254769279957">0769 279 957</a></p>
+              <p style="margin-top: 6px; font-size: 0.85rem; color: #94a3b8;">Available Monday - Saturday for bookings
+                &amp; emergency standbys.</p>
+            </div>
+
+            <div class="contact-card-item">
+              <h4>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff4d6d" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Official Email
+              </h4>
+              <p><a href="mailto:chiefemergencycare@gmail.com">chiefemergencycare@gmail.com</a></p>
+              <p style="margin-top: 4px; font-size: 0.85rem; color: #94a3b8;">Send official requests for invoices,
+                proposals, and group rates.</p>
+            </div>
+
+            <div class="contact-card-item">
+              <h4>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff4d6d" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Operational Hubs
+              </h4>
+              <p><strong>Nairobi Headquarters:</strong> Nairobi City, Kenya</p>
+              <p><strong>Coastal Branch:</strong> Mombasa City, Kenya</p>
+            </div>
+          </div>
+
+          <!-- Booking Form -->
+          <div class="contact-form-container">
+            <form id="contactForm" aria-label="Contact and booking form">
+              <div class="form-group">
+                <label for="f-name">Full Name *</label>
+                <input id="f-name" name="name" placeholder="e.g. Dr. Jane Doe /Catech Graphics & Solutions" required>
+              </div>
+
+              <div class="form-group">
+                <label for="f-email">Email Address *</label>
+                <input id="f-email" name="email" type="email" placeholder="you@domain.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="f-phone">Phone Number (WhatsApp)</label>
+                <input id="f-phone" name="phone" placeholder="07XX XXX XXX">
+              </div>
+
+              <div class="form-group">
+                <label for="f-interest">Service or Training Course Required</label>
+                <select id="f-interest" name="interest" aria-label="I am interested in">
+                  <option value="First Aid AED and CPR">First Aid, CPR &amp; AED Training</option>
+                  <option value="Basic Life Support (BLS)">Basic Life Support (BLS) Certification</option>
+                  <option value="Advanced Cardiovascular Life Support (ACLS)">Advanced Cardiovascular Life Support
+                    (ACLS)</option>
+                  <option value="Pediatric Advanced Life Support (PALS)">Pediatric Advanced Life Support (PALS)</option>
+                  <option value="Nanny and Child Safety Training">Nanny &amp; Child Safety Training</option>
+                  <option value="Event Medical Standby Cover">Event Medical Standby &amp; Ambulance Cover</option>
+                  <option value="Corporate Workplace Safety Audit">Corporate Workplace Safety Package</option>
+                  <option value="Disaster Management or Partnership">Institutional Partnership / Disaster Management
+                  </option>
+                  <option value="Clinical Placement Enquiry">Clinical Placement Attachment</option>
+                  <option value="Other Enquiries">Other Custom Enquiries</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="f-message">Your Message or Requirements *</label>
+                <textarea id="f-message" name="message" rows="4"
+                  placeholder="Mention group size, preferred dates, location (Nairobi, Mombasa, or other), or specific event details."
+                  required></textarea>
+              </div>
+
+              <button class="send" type="submit">Submit Enquiry / Request Booking</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div style="font-weight: 700; color: #ffffff; font-size: 1.15rem;">Chief Emergency Care-Kenya (CECK)</div>
+      <p>AHA-Accredited Emergency Care Training Provider &bull; On-Site Medical Response &bull; Kenya</p>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#training">Training Courses</a></li>
+        <li><a href="#officials">Leadership Team</a></li>
+        <li><a href="#contact">Contact &amp; Bookings</a></li>
+      </ul>
+      <p style="margin-top: 12px; font-size: 0.85rem; color: #64748b;">
+        &copy; 2026 Chief Emergency Care-Kenya. All rights reserved. &bull; Nairobi: 0119 383 200 &bull; Mombasa: 0769
+        279 957
+      </p>
+    </div>
+  </footer>
+
+  <!-- JSON-LD SEO Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EmergencyService",
+  "name": "Chief Emergency Care-Kenya",
+  "alternateName": "CECK",
+  "url": "https://chiefemergencycare.co.ke",
+  "logo": "logo/logo.jpeg",
+  "description": "AHA-accredited Emergency Care Services, BLS, ACLS, PALS, First Aid training and event medical cover across Kenya.",
+  "telephone": "+254119383200",
+  "email": "chiefemergencycare@gmail.com",
+  "areaServed": "Kenya",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  }
+}
 </script>
 
-<script>
-/* Carousel with improved accessibility and reduced-motion respect */
-(function(){
-  const slides = Array.from(document.querySelectorAll('.slide'));
-  const dotsBox = document.querySelector('.dots');
-  let idx = 0;
-  let timer = null;
-  const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  <script>
+    // ==================== RESPONSIVE HAMBURGER & FULL SCREEN MOBILE NAV ====================
+    (function initNavigation() {
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const navList = document.getElementById('navList');
+      const navLinks = navList.querySelectorAll('a');
 
-  // create dots with accessible attributes
-  slides.forEach((_, n) => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.setAttribute('aria-label', 'Slide ' + (n + 1));
-    b.setAttribute('role','tab');
-    b.setAttribute('aria-selected','false');
-    b.addEventListener('click', () => { show(n); restart(); });
-    dotsBox.appendChild(b);
-  });
-  const dots = Array.from(dotsBox.querySelectorAll('button'));
+      function toggleMenu() {
+        const isOpen = navList.classList.toggle('open');
+        hamburgerBtn.classList.toggle('active', isOpen);
+        hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      }
 
-  function setAriaForSlide(i, active) {
-    const s = slides[i];
-    s.classList.toggle('active', active);
-    s.setAttribute('aria-hidden', String(!active));
-    dots[i].classList.toggle('active', active);
-    dots[i].setAttribute('aria-pressed', String(active));
-    dots[i].setAttribute('aria-selected', String(active));
-    if (active) dots[i].setAttribute('aria-current','true'); else dots[i].removeAttribute('aria-current');
-  }
+      function closeMenu() {
+        navList.classList.remove('open');
+        hamburgerBtn.classList.remove('active');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
 
-  function show(n) {
-    if (n < 0) n = slides.length - 1;
-    if (n >= slides.length) n = 0;
-    setAriaForSlide(idx, false);
-    idx = n;
-    setAriaForSlide(idx, true);
-  }
+      hamburgerBtn.addEventListener('click', toggleMenu);
 
-  function next() { show((idx + 1) % slides.length); }
+      // Close when clicking any link in the menu
+      navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
 
-  function restart() {
-    if (timer) clearInterval(timer);
-    if (prefersReduce) return;
-    timer = setInterval(next, 5000);
-  }
+      // Close on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navList.classList.contains('open')) {
+          closeMenu();
+        }
+      });
+    })();
 
-  // Pause auto-advance on user interaction
-  const hero = document.querySelector('.hero');
-  hero.addEventListener('mouseenter', () => clearInterval(timer));
-  hero.addEventListener('focusin', () => clearInterval(timer));
-  hero.addEventListener('mouseleave', () => restart());
-  hero.addEventListener('focusout', () => restart());
+    // ==================== FULL-SCREEN HERO CAROUSEL ====================
+    (function initHeroCarousel() {
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const dotsBox = document.querySelector('.dots');
+      const prevBtn = document.getElementById('prevSlideBtn');
+      const nextBtn = document.getElementById('nextSlideBtn');
+      let currentIdx = 0;
+      let autoTimer = null;
+      const prefersReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Keyboard controls: left/right arrows to navigate
-  hero.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') { show(idx - 1); restart(); }
-    if (e.key === 'ArrowRight') { show(idx + 1); restart(); }
-  });
+      // Build dots
+      slides.forEach((_, n) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.setAttribute('aria-label', 'Go to slide ' + (n + 1));
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-selected', n === 0 ? 'true' : 'false');
+        if (n === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+          goToSlide(n);
+          restartTimer();
+        });
+        dotsBox.appendChild(dot);
+      });
+      const dots = Array.from(dotsBox.querySelectorAll('button'));
 
-  // Initialize
-  show(0);
-  restart();
+      function updateSlide(idx, isActive) {
+        const slide = slides[idx];
+        slide.classList.toggle('active', isActive);
+        slide.setAttribute('aria-hidden', String(!isActive));
 
-  // Improve slide semantics for screen readers: keep role labels from data attribute (already set in markup)
-})();
+        const dot = dots[idx];
+        if (dot) {
+          dot.classList.toggle('active', isActive);
+          dot.setAttribute('aria-selected', String(isActive));
+        }
+      }
 
-/* Contact form: compose mailto for simple fallback.
-   Use form fields and validate basic presence - the browser still enforces required.
-*/
-document.getElementById('contactForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const v = id => (document.getElementById(id) || {}).value || '';
-  const subject = 'Website enquiry: ' + v('f-interest');
-  const body = 'Name: ' + v('f-name') + '\nEmail: ' + v('f-email') + '\nPhone: ' + v('f-phone') + '\n\n' + v('f-message');
-  // mailto fallback - user agent will open default mail client
-  window.location.href = 'mailto:chiefemergencycare@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-});
-</script>
+      function goToSlide(n) {
+        let nextIdx = n;
+        if (nextIdx < 0) nextIdx = slides.length - 1;
+        if (nextIdx >= slides.length) nextIdx = 0;
+
+        updateSlide(currentIdx, false);
+        currentIdx = nextIdx;
+        updateSlide(currentIdx, true);
+      }
+
+      function nextSlide() {
+        goToSlide(currentIdx + 1);
+      }
+
+      function prevSlide() {
+        goToSlide(currentIdx - 1);
+      }
+
+      function restartTimer() {
+        if (autoTimer) clearInterval(autoTimer);
+        if (prefersReduceMotion) return;
+        autoTimer = setInterval(nextSlide, 5000);
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          prevSlide();
+          restartTimer();
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          nextSlide();
+          restartTimer();
+        });
+      }
+
+      // Keyboard navigation within hero
+      const heroEl = document.querySelector('.hero');
+      heroEl.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') { prevSlide(); restartTimer(); }
+        if (e.key === 'ArrowRight') { nextSlide(); restartTimer(); }
+      });
+
+      // Pause on hover
+      heroEl.addEventListener('mouseenter', () => clearInterval(autoTimer));
+      heroEl.addEventListener('mouseleave', () => restartTimer());
+
+      // Initialize
+      goToSlide(0);
+      restartTimer();
+    })();
+
+    // ==================== CONTACT FORM HANDLER ====================
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const getVal = id => (document.getElementById(id) || {}).value || '';
+      const interest = getVal('f-interest');
+      const name = getVal('f-name');
+      const email = getVal('f-email');
+      const phone = getVal('f-phone');
+      const message = getVal('f-message');
+
+      const subject = `[CECK Booking/Enquiry] ${interest} - ${name}`;
+      const body = `Hello Chief Emergency Care-Kenya,\n\nI would like to request services/training as follows:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nSelected Service/Course: ${interest}\n\nMessage/Requirements:\n${message}\n\nThank you.`;
+
+      window.location.href = `mailto:chiefemergencycare@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
 </body>
+
 </html>
