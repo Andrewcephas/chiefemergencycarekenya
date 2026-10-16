@@ -893,21 +893,65 @@
 
     /* ==================== FOOTER ==================== */
     footer {
+      position: relative;
       background: #060b19;
       color: var(--text-muted);
-      padding: 48px 24px 32px;
+      padding: 52px 24px 36px;
       font-size: 0.92rem;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+
+    /* Watermark text behind footer machine / content */
+    .footer-watermark-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-3deg);
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 4.4rem);
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.035);
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
     .footer-content {
+      position: relative;
+      z-index: 2;
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 20px;
+      gap: 18px;
+    }
+
+    .watermark-credit {
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: #64748b;
+      margin-top: 4px;
+      opacity: 0.85;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .watermark-credit .watermark-brand {
+      color: #94a3b8;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      transition: color 0.2s ease;
+    }
+
+    .watermark-credit:hover .watermark-brand {
+      color: #ff4d6d;
     }
 
     .footer-links {
@@ -1479,6 +1523,9 @@
   </main>
 
   <footer>
+    <!-- Background watermark behind footer content / machine -->
+    <div class="footer-watermark-bg" aria-hidden="true">CATECH GRAPHICS &amp; SOLUTIONS</div>
+
     <div class="footer-content">
       <div style="font-weight: 700; color: #ffffff; font-size: 1.15rem;">Chief Emergency Care-Kenya (CECK)</div>
       <p>AHA-Accredited Emergency Care Training Provider &bull; On-Site Medical Response &bull; Kenya</p>
@@ -1489,10 +1536,13 @@
         <li><a href="#officials">Leadership Team</a></li>
         <li><a href="#contact">Contact &amp; Bookings</a></li>
       </ul>
-      <p style="margin-top: 12px; font-size: 0.85rem; color: #64748b;">
+      <p style="margin-top: 10px; font-size: 0.85rem; color: #64748b;">
         &copy; 2026 Chief Emergency Care-Kenya. All rights reserved. &bull; Nairobi: 0119 383 200 &bull; Mombasa: 0769
         279 957
       </p>
+      <div class="watermark-credit">
+        Powered &amp; Designed by <span class="watermark-brand">CATECH GRAPHICS &amp; SOLUTIONS</span>
+      </div>
     </div>
   </footer>
 
