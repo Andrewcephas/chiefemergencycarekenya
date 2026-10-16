@@ -15,6 +15,8 @@ body{font-family:Segoe UI,Arial,sans-serif;color:#e6ebf5;line-height:1.6;backgro
 a{text-decoration:none;color:inherit}
 header{position:sticky;top:0;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:20}
 nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:8px 20px;flex-wrap:wrap;gap:8px}
+.logo{display:flex;align-items:center;}
+.logo svg{height:48px;width:auto;margin-right:12px;}
 nav ul{display:flex;gap:20px;list-style:none;font-size:.95rem;font-weight:600;flex-wrap:wrap;color:var(--dark)}
 nav ul a:hover{color:var(--red)}
 .skip-link{position:absolute;left:8px;top:8px;background:#fff;color:var(--dark);padding:.5rem .75rem;border-radius:6px;z-index:30;transform:translateY(-120%);transition:transform .18s ease}
@@ -66,7 +68,7 @@ button:focus, a:focus, input:focus, select:focus, textarea:focus{outline:3px sol
 
 <header>
 <nav aria-label="Primary">
-  <a href="#home" aria-label="Chief Emergency Care-Kenya home">
+  <a href="#home" class="logo" aria-label="Chief Emergency Care-Kenya home">
     <svg height="64" viewBox="0 0 400 262" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chief Emergency Care-Kenya logo">
       <path d="M200 132C150 102 104 72 118 38C132 8 184 14 200 46C216 14 268 8 282 38C296 72 250 102 200 132Z" fill="none" stroke="#c8102e" stroke-width="7" stroke-linejoin="round"/>
       <rect x="158" y="58" width="84" height="36" rx="9" fill="#14213d"/>
@@ -90,6 +92,18 @@ button:focus, a:focus, input:focus, select:focus, textarea:focus{outline:3px sol
 
 <main id="main">
 <div class="hero" id="home" aria-roledescription="carousel" aria-label="Hero carousel">
+  <div class="slide" role="img" aria-label="Slide 1" style="background-image:url('slides/slide (1).jpeg')"></div>
+  <div class="slide" role="img" aria-label="Slide 2" style="background-image:url('slides/slide (2).jpeg')"></div>
+  <div class="slide" role="img" aria-label="Slide 3" style="background-image:url('slides/slide (3).jpeg')"></div>
+  <div class="slide" role="img" aria-label="Slide 4" style="background-image:url('slides/slide (4).jpeg')"></div>
+  <div class="slide" role="img" aria-label="Slide 5" style="background-image:url('slides/slide (5).jpeg')"></div>
+  <div class="slide" role="img" aria-label="Slide 6" style="background-image:url('slides/slide (6).jpeg')"></div>
+  <div class="slide" role="img" aria-label="Slide 7" style="background-image:url('slides/slide (7).jpeg')"></div>
+  <div class="slide" role="img" aria-label="Slide 8" style="background-image:url('slides/slide (8).jpeg')"></div>
+  <div class="slide" role="img" aria-label="Slide 9" style="background-image:url('slides/slide (9).jpeg')"></div>
+  <div class="slide" role="img" aria-label="Slide 10" style="background-image:url('slides/slide (10).jpeg')"></div>
+  <div class="slide" role="img" aria-label="Slide 11" style="background-image:url('slides/slide (11).jpeg')"></div>
+  <div class="slide" role="img" aria-label="Slide 12" style="background-image:url('slides/slide (12).jpeg')"></div>
   <div class="hero-content">
     <h1>Professional Emergency Care Services and Training Across Kenya</h1>
     <p>American Heart Association accredited training, on-site emergency care cover and partnerships that make communities safer.</p>
@@ -148,25 +162,33 @@ button:focus, a:focus, input:focus, select:focus, textarea:focus{outline:3px sol
   <p class="sub">The leadership team guiding CECK.</p>
   <div class="grid">
     <div class="card person">
-      <div class="avatar" aria-hidden="true">FO</div>
+      <div class="avatar">
+        <img src="team/Felix Onyango.jpeg" alt="Felix Onyango">
+      </div>
       <h3>Felix Onyango</h3>
       <div class="role">Director and Lead Instructor</div>
       <p>Provides strategic direction and leads the delivery of CECK's training programmes.</p>
     </div>
     <div class="card person">
-      <div class="avatar" aria-hidden="true">BO</div>
+      <div class="avatar">
+        <img src="team/Benard Ochola.jpeg" alt="Benard Ochola">
+      </div>
       <h3>Benard Ochola</h3>
       <div class="role">Training Site Administrator</div>
       <p>Oversees day-to-day operations.</p>
     </div>
     <div class="card person">
-      <div class="avatar" aria-hidden="true">SO</div>
+      <div class="avatar">
+        <img src="team/Stephen Otieno.jpeg" alt="Stephen Otieno">
+      </div>
       <h3>Stephen Otieno</h3>
       <div class="role">Chairperson</div>
       <p>Chairs the organisation's leadership and guides its governance.</p>
     </div>
     <div class="card person">
-      <div class="avatar" aria-hidden="true">TO</div>
+      <div class="avatar">
+        <img src="team/Trizah Otieno.jpeg" alt="Trizah Otieno">
+      </div>
       <h3>Trizah Otieno</h3>
       <div class="role">Customer Service Support</div>
       <p>First point of contact for enquiries, bookings and training requests.</p>
